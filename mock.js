@@ -28,10 +28,10 @@ app.get('/', function (req, res) {
         return JSON.parse(fs.readFileSync('./mock/' + file, 'utf-8'));
     };
     // mock1
-    app.get('/agri/interface/home', function (req, res) {
+    app.get('/weather/interface/home', function (req, res) {
         res.json(readFile('home/home.json'));
     });
-    app.get('/agri/interface/detail', function (req, res) {
+    app.get('/weather/interface/detail', function (req, res) {
         res.json(readFile('detail/detail.json'));
     });
 

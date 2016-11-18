@@ -2,9 +2,9 @@ var path = require('path');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
 var HtmlwebpackPlugin = require('html-webpack-plugin');  // 生成html文件
-var projectName = "agri";
-var agriAssetsFolder = '/assets/' + projectName + '/';
-var agriTemplateFolder = '/template/' + projectName + '/';
+var projectName = "weather";
+var assetsFolder = '/assets/' + projectName + '/';
+var templateFolder = '/template/' + projectName + '/';
 
 // 定义当前是否处于开发debug阶段
 var isDebug = JSON.stringify(JSON.parse(process.env.DEBUG || 'false'));
@@ -49,9 +49,9 @@ module.exports = {
     // 文件输出目录
     path: path.resolve(__dirname, 'output'),
     // 输出文件名
-    filename: agriAssetsFolder + 'js/[name].min.js?[hash]',
+    filename: assetsFolder + 'js/[name].min.js?[hash]',
     // cmd、amd异步加载脚本配置名称
-    chunkFilename: agriAssetsFolder + 'js/[name].chunk.js?[hash]',
+    chunkFilename: assetsFolder + 'js/[name].chunk.js?[hash]',
     publicPath: ''
   },
   module: {
@@ -81,7 +81,7 @@ module.exports = {
       progress: true,
       // ajax 代理到5000端口
       proxy: {
-          '/agri/interface/**': {
+          '/weather/interface/**': {
               target: 'http://127.0.0.1:5000',
               secure: false
           }
@@ -104,7 +104,7 @@ module.exports = {
               warnings: false
           }
       }),
-      new webpack.optimize.CommonsChunkPlugin('vendors', agriAssetsFolder + 'js/[name].chunk.js?[hash]'),
+      new webpack.optimize.CommonsChunkPlugin('vendors', assetsFolder + 'js/[name].chunk.js?[hash]'),
       new webpack.ProvidePlugin({
          "$": "jquery"
       }),

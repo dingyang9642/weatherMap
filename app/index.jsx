@@ -2,7 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Router = require('react-router/lib/Router');
 var browserHistory = require('react-router/lib/browserHistory');
-var projectName = "agri";
+var projectName = "weather";
 
 var App = React.createClass({
     render: function() {
