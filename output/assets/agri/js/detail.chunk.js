@@ -1,0 +1,1 @@
+webpackJsonp([1],{202:function(e,a,t){"use strict";var n=t(1),r=n.createClass({displayName:"detailComponent",render:function(){return n.createElement("div",{className:"detail-box"},"I am detail page!!")}});e.exports=r}});
