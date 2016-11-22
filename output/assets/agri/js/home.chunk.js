@@ -1,1 +1,0 @@
-webpackJsonp([2],{203:function(e,o,a){(function(o){"use strict";var n=a(1);console.log(o);var t=n.createClass({displayName:"homeComponent",render:function(){return n.createElement("div",{className:"home-box"},"I am home page!!")}});e.exports=t}).call(o,a(204))}});

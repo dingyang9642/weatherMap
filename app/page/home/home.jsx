@@ -2,7 +2,7 @@ var React = require('react');
 require('../../component/common/common.css');
 var homePageStyle = require('./home.useable.css');
 
-var MapElement = require('../../component/content/map/map.jsx');
+var MapElement = require('../../component/widget/map/map.jsx');
 
 var homeComponent = React.createClass({
 	getInitialState: function() {

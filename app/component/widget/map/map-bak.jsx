@@ -22,6 +22,7 @@ window.getMyPosition = function() {
 	var geolocation = new BMap.Geolocation();
 	geolocation.getCurrentPosition(function(data){
 		if(this.getStatus() == BMAP_STATUS_SUCCESS) {
+			console.log('lbs success');
 			mapInit({
 				"point": 
 				    {
@@ -32,6 +33,7 @@ window.getMyPosition = function() {
 				"map": map
 			});
 		} else {
+			console.log('lbs fail');
 			mapInit({
 				"map": map
 			});
