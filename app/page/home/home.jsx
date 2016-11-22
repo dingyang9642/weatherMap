@@ -1,5 +1,5 @@
 var React = require('react');
-require('../../component/common/common.css');
+var commonPageStyle = require('../../component/widget/common/common.css');
 var homePageStyle = require('./home.useable.css');
 
 var MapElement = require('../../component/widget/map/map.jsx');
