@@ -15,7 +15,8 @@ if(isDebug === 'true') {
     console.log('hey, man : I am in debuging............');
     configVarObj = {
         htmlPath: 'index.html',  // 定义输出html文件路径
-        devtool: 'cheap-source-map' // 生成sourcemap,便于开发调试
+        // devtool: 'cheap-source-map' // 生成sourcemap,便于开发调试
+        devtool: 'eval' // 生成sourcemap,便于开发调试[本地测试]
     };
 } else {
     console.log('hey, man : I am in releasing............');
@@ -91,8 +92,8 @@ module.exports = {
       progress: true,
       // ajax 代理到5000端口
       proxy: {
-          '/weather/interface/**': {
-              target: 'http://127.0.0.1:5000',
+          '/wt/**': {
+              target: 'http://127.0.0.1:8081',
               secure: false
           }
       },
