@@ -51,12 +51,12 @@ var mapElement = React.createClass({
 
 	},
 	componentDidMount: function() {
-        this.loadBaiduMapJs();
+        this.loadBiduMapJs();
 	},
-	loadBaiduMapJs: function() {
+	loadBiduMapJs: function() {
 		var script = document.createElement("script");
 		script.type = "text/javascript";
-		script.src = "//api.map.baidu.com/api?v=2.0&ak=UGhrN3QhCCGOBsEp0y952zDGPhTI9kKu&callback=getMyPosition";
+		script.src = "//api.map.bidu.com/api?v=2.0&ak=UGhrN3QhCCGOBsEp0y952zDGPhTI9kKu&callback=getMyPosition";
 		document.body.appendChild(script);
 	},
     render: function() {
